@@ -11,6 +11,9 @@ Based on this URL, the service implements the following endpoints:
 - `/` &mdash; a hello message
 - `/players` &mdash; the full list of players
 - `/players/:id` &mdash; the single player with the given ID (e.g., `/players/1`)
+- `/games` &mdash; the full list of games, ordered by time (most recent first)
+- `/games/:id` &mdash; the list of players and their scores for a specific game (e.g., `/games/2`)
+- DELETE `/games/:id` &mdash; deletes a specific game and all associated records (PlayerGame and PropertyOwnership)
 
 Also, it gives the following responses:
 
