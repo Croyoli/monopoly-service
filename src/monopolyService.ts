@@ -242,7 +242,7 @@ function readGames(_request: Request, response: Response, next: NextFunction): v
  */
 function readGamePlayers(request: Request, response: Response, next: NextFunction): void {
     db.manyOrNone(
-        `SELECT Player.name, Player.email, PlayerGame.score
+        `SELECT Player.name, Player.emailaddress AS email, PlayerGame.score
          FROM PlayerGame
          JOIN Player ON PlayerGame.playerID = Player.id
          WHERE PlayerGame.gameID = \${id}
